@@ -1,17 +1,40 @@
 {
-    "buildNpmdoc":"traverse",
+    "author": "kai zhu <kaizhu256@gmail.com>",
+    "buildNpmdoc": "traverse",
+    "description": "api documentation for [traverse (v0.6.6)](https://github.com/substack/js-traverse) [![npm package](https://img.shields.io/npm/v/npmdoc-traverse.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-traverse) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-traverse.svg)](https://travis-ci.org/npmdoc/node-npmdoc-traverse)",
     "devDependencies": {
-        "traverse": "*",
         "electron-lite": "kaizhu256/node-electron-lite#alpha",
+        "traverse": "*",
         "utility2": "kaizhu256/node-utility2#alpha"
     },
-    "name":"npmdoc-traverse",
+    "engines": {
+        "node": ">=4.0"
+    },
+    "homepage": "https://github.com/npmdoc/node-npmdoc-traverse",
+    "keywords": [
+        "documentation",
+        "traverse"
+    ],
+    "license": "MIT",
+    "main": "lib.npmdoc_traverse.js",
+    "name": "npmdoc-traverse",
+    "nameAlias": "npmdoc_traverse",
+    "nameOriginal": "npmdoc-traverse",
+    "os": [
+        "darwin",
+        "linux"
+    ],
     "repository": {
         "type": "git",
         "url": "https://github.com/npmdoc/node-npmdoc-traverse.git"
     },
     "scripts": {
-        "build-ci": "utility2 shReadmeTest build_ci.sh"
+        "build-ci": "utility2 shReadmeTest build_ci.sh",
+        "env": "env",
+        "heroku-postbuild": "(set -e; npm install \"kaizhu256/node-utility2#alpha\"; utility2 shDeployHeroku)",
+        "postinstall": "if [ -f npm_scripts.sh ]; then ./npm_scripts.sh postinstall; fi",
+        "start": "(set -e; export PORT=${PORT:-8080}; utility2 start test.js)",
+        "test": "(set -e; export PORT=$(utility2 shServerPortRandom); utility2 test test.js)"
     },
     "version": "0.0.1"
 }
