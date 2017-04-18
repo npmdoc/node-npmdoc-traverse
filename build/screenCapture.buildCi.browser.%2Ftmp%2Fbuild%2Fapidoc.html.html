@@ -1,4 +1,4 @@
-<div class="apidocDiv">
+<html><head></head><body><div class="apidocDiv">
 <style>
 /*csslint
 */
@@ -47,17 +47,10 @@
 }
 </style>
 <h1>api documentation for
-    <a
-
-        href="https://github.com/substack/js-traverse"
-
-    >traverse (v0.6.6)</a>
+    <a href="https://github.com/substack/js-traverse">traverse (v0.6.6)</a>
 </h1>
 <h4>traverse and transform objects by visiting every node on a recursive walk</h4>
-<div class="apidocSectionDiv"><a
-    href="#apidoc.tableOfContents"
-    id="apidoc.tableOfContents"
-><h1>table of contents</h1></a><ol>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
 
     <li class="apidocModuleLi"><a href="#apidoc.module.traverse">module traverse</a><ol>
 
@@ -457,7 +450,7 @@ attributes:
     <li>example usage<pre class="apidocCodePre">...
 
 ````javascript
-var traverse = require(&#x27;traverse&#x27;);
+var traverse = require('traverse');
 
 var obj = { a : 1, b : 2, c : [ 3, 4 ] };
 obj.c.push(obj);
@@ -523,7 +516,7 @@ For each node in the object, perform a
 [left-fold](http://en.wikipedia.org/wiki/Fold_(higher-order_function))
 with the return value of `fn(acc, node)`.
 
-If `acc` isn&#x27;t specified, `acc` is set to the root object for the first step
+If `acc` isn't specified, `acc` is set to the root object for the first step
 and the root element is skipped.
 
 ## .<span class="apidocCodeKeywordSpan">paths</span>()
@@ -787,7 +780,7 @@ attributes:
     <li>example usage<pre class="apidocCodePre">...
 
 ````javascript
-var traverse = require(&#x27;traverse&#x27;);
+var traverse = require('traverse');
 
 var obj = { a : 1, b : 2, c : [ 3, 4 ] };
 obj.c.push(obj);
@@ -863,7 +856,7 @@ For each node in the object, perform a
 [left-fold](http://en.wikipedia.org/wiki/Fold_(higher-order_function))
 with the return value of `fn(acc, node)`.
 
-If `acc` isn&#x27;t specified, `acc` is set to the root object for the first step
+If `acc` isn't specified, `acc` is set to the root object for the first step
 and the root element is skipped.
 
 ## .<span class="apidocCodeKeywordSpan">paths</span>()
@@ -978,3 +971,4 @@ Return whether the element at the array `path` exists.
     ]
 </div>
 </div>
+</body></html>
